@@ -1,3 +1,4 @@
+import com.evolutiongaming.model.Combination
 import com.evolutiongaming.util.InputParser
 
 import scala.io.StdIn
@@ -10,7 +11,7 @@ object Boot extends App {
 
   inputs.foreach { line =>
     val hands = InputParser.parseLine(line)
-    println(hands)
+    println(hands.map(Combination.fromHand))
   }
 
 }
