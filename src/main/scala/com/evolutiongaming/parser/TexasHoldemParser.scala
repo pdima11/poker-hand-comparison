@@ -1,9 +1,8 @@
-package com.evolutiongaming.util
-
+package com.evolutiongaming.parser
 import com.evolutiongaming.model.{Card, Hand}
 
-object InputParser {
-  def parseLine(line: String): List[Hand] = {
+object TexasHoldemParser extends InputParser {
+  override def parseLine(line: String): List[Hand] = {
     val input = line.trim.split(" ").toList
     val boardCards = Card.fromString(input.head)
 
