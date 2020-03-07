@@ -1,7 +1,9 @@
 package com.evolutiongaming.model
 
 
-final case class Card(value: Char, suit: Char, score: Int)
+final case class Card(value: Char, suit: Char, score: Int) {
+  override def toString: String = s"$value$suit"
+}
 
 object Card {
   def fromString(cards: String): List[Card] = {
